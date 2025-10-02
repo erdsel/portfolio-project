@@ -15,7 +15,7 @@ namespace portfolioProject.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "denemeeee!!!.";
+            ViewBag.Message = "denemeeee!!!''fkdjkfhdkjshfkjsd.";
 
             return View();
         }
