@@ -9,7 +9,12 @@ namespace portfolioProject.Controllers
     public class CategoryController : Controller
     {
         // GET: Category
-        public ActionResult Index()
+        public ActionResult CategoryList()
+        {
+            return View();
+        }
+
+        public ActionResult CreateCategory()
         {
             return View();
         }
