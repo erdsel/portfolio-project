@@ -77,3 +77,7 @@ C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfo
 C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfolioProject\obj\Debug\portfoli.5F711086.Up2Date
 C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfolioProject\obj\Debug\portfolioProject.dll
 C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfolioProject\obj\Debug\portfolioProject.pdb
+C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfolioProject\bin\EntityFramework.dll
+C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfolioProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfolioProject\bin\EntityFramework.xml
+C:\Users\Asus\Desktop\portfolioProject\portfolioProject\portfolio-project\portfolioProject\bin\EntityFramework.SqlServer.xml
