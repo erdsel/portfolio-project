@@ -1,38 +1,40 @@
-﻿
+﻿@model List<portfolioProject.Models.Contact>
 @{
     ViewBag.Title = "Inbox";
     Layout = "~/Views/Admin/Index.cshtml";
+    int count = 0;
 }
 
 <table class="table table-bordered">
     <tr>
         <th>#</th>
         <th>Gönderen</th>
+        <th>Tarih</th>
         <th>Konu</th>
+        <th>Durum</th>
         <th>Mesajı Aç</th>
+        <th>Mesajı Sil</th>
     </tr>
 
-    <tr>
-        <td>1</td>
-        <td>Elif Yıldırım</td>
-        <td>Deneme</td>
-        <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
-    </tr>
-
-    <tr>
-        <td>1</td>
-        <td>Elif Yıldırım</td>
-        <td>Deneme</td>
-        <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
-    </tr>
-
-    <tr>
-        <td>1</td>
-        <td>Elif Yıldırım</td>
-        <td>Deneme</td>
-        <td><a href="#" class="btn btn-warning">Mesajı Aç</a></td>
-    </tr>
-
+    @foreach(var item in Model)
+    {
+        count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.NameSurname</td>
+                    <td>@item.SendDate</td>
+                    <td>@item.Subject</td>
+                    @if(item.isRead==false){
+                      <td><a href="/Message/ChangeMessageStatus/@item.ContactId" class="btn btn-info">Okundu Olarak İşaretle</a></td>
+                    }
+                    else{
+                      <td><a href="/Message/ChangeMessageStatus/@item.ContactId" class="btn btn-secondary">Okunmadı Olarak İşaretle</a></td>
+                    }
+                    <td>Durum</td>
+                    <td><a href="#" class="btn btn-success">Mesajı Aç</a></td>
+                    <td><a href="#" class="btn btn-danger">Mesajı Sil</a></td>
+                </tr>
+            }
 
 
 </table>

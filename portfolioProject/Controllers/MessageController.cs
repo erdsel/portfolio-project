@@ -1,4 +1,5 @@
-﻿using System;
+﻿using portfolioProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,26 @@ namespace portfolioProject.Controllers
 {
     public class MessageController : Controller
     {
-        // GET: Message
+        blogdbEntities context = new blogdbEntities();
         public ActionResult Inbox()
         {
-            return View();
+            var values = context.Contact.ToList();
+            return View(values);
         }
+        public ActionResult ChangeMessageStatus(int id)
+        {
+            var value = context.Contact.Find(id);
+            if (value.isRead == true)
+            {
+                value.isRead = false;
+            }
+            else
+            {
+                value.isRead = true;
+            }
+            context.SaveChanges();
+            return RedirectToAction("Inbox");
+        }
+
     }
 }

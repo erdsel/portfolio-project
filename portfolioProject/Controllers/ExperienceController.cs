@@ -44,7 +44,7 @@ namespace portfolioProject.Controllers
             return RedirectToAction("ExperienceList");
         }
 
-        [HttpPost]
+        [HttpGet]  // Sayfayı açmak (veriyi forma göstermek)
 
         public ActionResult UpdateExperience(int id) { 
             var value=context.Experience.Find(id);
@@ -52,11 +52,11 @@ namespace portfolioProject.Controllers
 
         }
 
-        [HttpPost]
+        [HttpPost] // Formu kaydetmek
 
         public ActionResult UpdateExperience(Experience experience)
         {
-            var value = context.Experience.Find(experience);
+            var value = context.Experience.Find(experience.ExperienceId);
             value.Title = experience.Title;
             value.Subtitle = experience.Subtitle;
             value.Description = experience.Description;
